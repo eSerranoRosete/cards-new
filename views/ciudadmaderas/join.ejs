@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/output.css">
+</head>
+<body>
+    <div class="max-w-lg py-6 px-4 bg-white m-auto shadow-xl">
+        <img src="/public/images/ciudadmaderas/logo-color.svg" alt="Ciudad Maderas Logo" class="w-64 m-auto">
+        <h2 class="text-xl font-bold my-6 text-center">¡Únete a nuestro equipo!</h2>
+        <p class="mb-4">Más de 37 años de experiencia en el ramo inmobiliario nos avalan como la Desarrolladora de Terrenos Residenciales Premium más grande del centro del país. Y hoy, queremos invitarte a que formes parte de nuestro proceso de selección para unite al área de ventas como Consultor de Inversión Patrimonial.</p>
+        <p class="font-semibold mb-2">Beneficios:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Excelente esquema de comisiones sobre el valor total de la venta</li>
+            <li>Horario flexible</li>
+            <li>Capacitación continua</li>
+            <li>Bonos y viajes anuales</li>
+            <li>Certificación como <b>Asesor Profesional inmobiliario</b> (avalada por el ITESM)</li>
+            <li>Guardias en puntos de venta</li>
+        </ul>
+        <p class="font-semibold mb-2">Requisitos:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Experiencia en ventas</li>
+            <li>Comunicación efectiva y orientado al cliente</li>
+            <li>Excelente presentación</li>
+            <li>Necesidad de ingresos mensuales mínimos de $40,000 MXN</li>
+        </ul>
+        <hr class="my-4">
+        <h2 class="text-xl font-semibold text-center mb-4">¡Postulate aquí!</h2>
+        <form name="join" action="https://cards.inteminer.com/<%= user._id %>/submit" method="POST">
+            <input type="text" name="name" placeholder="Nombre" class="rounded-lg border border-slate-300 py-1 px-4 w-full shadow-sm mb-3" required>
+            <input type="email" name="email" placeholder="Correo electrónico" class="rounded-lg border border-slate-300 py-1 px-4 w-full shadow-sm mb-3" required>
+            <input type="tel" name="phone" placeholder="Teléfono" class="rounded-lg border border-slate-300 py-1 px-4 w-full shadow-sm mb-3" required>
+            <hr class="my-4">
+            <!-- <label for="cv" class="text-sm">Carga tu CV (opcional)</label>
+            <input type="file" name="cv" class="mb-3"> -->
+            <!-- <hr class="my-4"> -->
+            <textarea name="message" id="message" rows="5" placeholder="Mensaje" class="rounded-lg border border-slate-300 py-1 px-4 w-full shadow-sm mb-3 resize-none"></textarea>
+            <input type="submit" value="Postularse" class="w-full bg-blue-500 text-white py-1 rounded-lg cursor-pointer mb-3">
+            <a href="javascript:history.back()" class="block text-center py-1 rounded-lg bg-slate-200 text-slate-800">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
