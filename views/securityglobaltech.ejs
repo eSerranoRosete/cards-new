@@ -39,7 +39,7 @@
             </div>
         </div>
         <!-- SOCIAL MEDIA BUTTONS -->
-        <div class="flex border-t border-slate-400 items-center justify-center flex-wrap w-full py-4">
+        <div class="flex border-t border-slate-400 items-center justify-center flex-wrap w-full py-4 bg-white">
             <% for( let i = 0; i < user.social.length; i++ ) { %>
                 <a href="<%= user.social[i].link %> " target="_blank"><img src="/public/images/buttons/<%= user.social[i].name %>.svg" alt="<%= user.social[i].name %> icon" class="w-12 m-3"></a>
             <% } %>
