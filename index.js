@@ -2,12 +2,15 @@ const express = require('express');
 const axios = require('axios');
 const nodemailer = require('nodemailer');
 
+const websiteRouter = require('./routers/website.router');
+
 require('dotenv/config');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use('/public', express.static(__dirname + '/public'));
+app.use('/', websiteRouter);
 
 app.get('/:id', (req, res) => {
 
@@ -91,6 +94,6 @@ app.post('/:id/submit', (req, res) => {
         })
 })
 
-app.listen(5501, () => {
-    console.log('App running at http://localhost:5501')
+app.listen(5500, () => {
+    console.log('App running at http://localhost:5500')
 })
