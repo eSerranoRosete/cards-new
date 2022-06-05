@@ -11,68 +11,91 @@
 
 <body>
   <section class="bg-white dark:bg-gray-800">
-    <nav
-      class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center bg-white/90 dark:bg-gray-800/90 backdrop-blur-md fixed inset-x-0 top-0 z-50">
-      <div class="flex items-center justify-between">
-        <div>
-          <a class="text-2xl font-bold text-gray-800 dark:text-white" href="/">Inteminer <span
-              class="text-blue-600">Cards</span></a>
+    <div
+      class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md lg:fixed lg:top-0 lg:inset-x-0 lg:z-50 border-b border-slate-200 dark:border-slate-800">
+      <nav class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
+        <div class="flex items-center justify-between">
+          <div>
+            <a class="text-2xl font-bold text-gray-800 dark:text-white" href="/">Inteminer <span
+                class="text-blue-600">Cards</span></a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button id="mobile-menu-btn" type="button"
+              class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                <path fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                </path>
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <!-- Mobile menu button -->
-        <div class="flex lg:hidden">
-          <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
-            aria-label="toggle menu">
-            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-              <path fill-rule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-              </path>
-            </svg>
-          </button>
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div id="mobile-menu"
+          class="hidden lg:flex flex-col mt-4 space-y-2 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0 text-sm">
+          <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+            href="/">Inicio</a>
+          <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+            href="/#components">Componentes</a>
+          <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+            href="#">Precios</a>
+          <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
+            href="#">Contacto</a>
         </div>
-      </div>
 
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-      <div class="flex flex-col mt-4 space-y-2 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0 text-sm">
-        <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
-          href="/">Home</a>
-        <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
-          href="/#components">Components</a>
-        <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
-          href="#">Pricing</a>
-        <a class="text-gray-700 transition-colors duration-200 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500"
-          href="#">Contact</a>
-      </div>
-
-      <a class="flex items-center justify-center text-xs px-5 py-2 mt-4 font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg lg:mt-0 hover:bg-blue-500 lg:w-auto"
-        href="/findme">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        Encontrar mi tarjeta
-      </a>
-    </nav>
+        <a class="flex items-center justify-center text-xs px-5 py-2 mt-4 font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg lg:mt-0 hover:bg-blue-500 lg:w-auto"
+          href="/findme">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Encontrar mi tarjeta
+        </a>
+      </nav>
+    </div>
   </section>
 
-  <section class="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-800 mt-64">
+  <section class="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-800 mt-20">
     <div class="container py-6">
       <h1 class="text-lg font-bold text-center lg:text-2xl">
         ¿Perdiste el link de tu tarjeta?
       </h1>
 
-      <div class="flex justify-center mt-6">
+      <div class="flex justify-center mt-6 mb-10">
         <div
           class="bg-white border rounded-md focus-within:ring dark:bg-gray-800 dark:border-gray-600 focus-within:border-blue-400 focus-within:ring-blue-300 focus-within:ring-opacity-40 dark:focus-within:border-blue-300">
-          <div class="flex flex-wrap justify-between md:flex-row">
-            <input type="email"
+          <form id="find-card" class="flex flex-wrap justify-between md:flex-row">
+            <input type="email" required id="email"
               class="p-2 m-1 text-sm text-gray-700 bg-transparent appearance-none focus:outline-none focus:placeholder-transparent"
               placeholder="Ingresa tu email" aria-label="Ingresa tu email">
             <button
               class="w-full px-3 py-2 m-1 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded-md dark:hover:bg-gray-600 dark:bg-gray-700 lg:w-auto hover:bg-gray-700">buscar</button>
-          </div>
+          </form>
         </div>
       </div>
+
+      <div id="found-card" class="text-center hidden">
+        <p class="mb-5">Encontramos esta tarjeta:</p>
+        <div class="text-gray-800 border border-slate-400 m-auto rounded-xl w-fit shadow-xl px-10 py-6">
+          <h4 id="name" class="text-2xl font-bold"></h4>
+          <p class="flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg><span id="company-name"></span></p>
+          <a id="url" class=" px-6 py-2 inline-block bg-blue-600 rounded-lg text-white text-xs mt-2" target="_blank">Ir
+            a mi tarjeta</a>
+        </div>
+      </div>
+
+      <div id="not-found"
+        class="text-gray-800 border border-slate-400 m-auto rounded-xl w-fit max-w-sm text-center shadow-xl px-10 py-6 hidden">
+        <h4 id="name" class="text-2xl font-bold">Lo sentimos, no encontramos ninguna tarjeta con ese email.</h4>
+      </div>
+
     </div>
   </section>
   <footer
@@ -100,6 +123,50 @@
       </div>
     </div>
   </footer>
+  <script>
+
+    mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggled = false;
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      if (!mobileMenuToggled) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        mobileMenuToggled = true;
+      } else {
+        mobileMenu.classList.remove('flex');
+        mobileMenu.classList.add('hidden');
+        mobileMenuToggled = false;
+      }
+    })
+
+    document.getElementById('find-card').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+
+      fetch(`https://api.inteminer.com/users/find`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
+        .then(response => response.json())
+        .then(data => {
+
+          if (!data.error) {
+
+            document.getElementById('not-found').classList.add('hidden');
+
+            document.getElementById('name').innerHTML = data.name;
+            document.getElementById('company-name').innerHTML = data.company_name;
+            document.getElementById('url').href = data.url;
+
+            document.getElementById('found-card').classList.remove('hidden');
+          } else {
+            document.getElementById('found-card').classList.add('hidden');
+            document.getElementById('not-found').classList.remove('hidden');
+          }
+        });
+
+    })
+  </script>
 </body>
 
 </html>
