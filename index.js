@@ -14,48 +14,48 @@ app.use('/', websiteRouter);
 
 app.get('/:id', (req, res) => {
 
-    axios(`${process.env.API_URL}/${req.params.id}`)
+    axios(`${process.env.API_URL}/${req.params.id}?api_key=${process.env.API_KEY}`)
         .then(response => {
 
             const user = response.data;
             try {
-                res.render(user.cardSettings.skin, {user: user})
+                res.render(user.cardSettings.skin, { user: user })
             } catch {
                 return
             }
         })
         .catch(error => {
-            if(error.response)
-            res.sendStatus(error.response.status)
+            if (error.response)
+                res.sendStatus(error.response.status)
         })
 })
 
 app.get('/:id/join', (req, res) => {
 
-    axios(`${process.env.API_URL}/${req.params.id}`)
+    axios(`${process.env.API_URL}/${req.params.id}?api_key=${process.env.API_KEY}`)
         .then(response => {
 
             const user = response.data;
-            
+
             if (user.role == 'coordinador' || user.role == 'gerente') {
-                res.render('ciudadmaderas/join.ejs', {user: user});
+                res.render('ciudadmaderas/join.ejs', { user: user });
             } else {
-                res.status(405).json({error: 'No permission'});
+                res.status(405).json({ error: 'No permission' });
             }
         })
         .catch(error => {
-            if(error.response)
-            res.sendStatus(error.response.status)
+            if (error.response)
+                res.sendStatus(error.response.status)
         })
 })
 
 app.post('/:id/submit', (req, res) => {
 
-    axios(`${process.env.API_URL}/${req.params.id}`)
+    axios(`${process.env.API_URL}/${req.params.id}?api_key=${process.env.API_KEY}`)
         .then(response => {
 
             async function main() {
-        
+
                 let transporter = nodemailer.createTransport({
                     host: "mail.inteminer.com",
                     port: 26,
@@ -68,7 +68,7 @@ app.post('/:id/submit', (req, res) => {
                         rejectUnauthorized: false
                     }
                 });
-        
+
                 let info = await transporter.sendMail({
                     from: 'recluta@inteminer.com',
                     to: user.email,
@@ -81,16 +81,16 @@ app.post('/:id/submit', (req, res) => {
                         <p>Mensaje: ${req.body.message}</p>
                     `
                 });
-                
+
                 console.log("Message sent: %s", info.messageId);
             }
 
             main().catch(console.error);
-            res.render('ciudadmaderas/submitted.ejs', {user: user});
+            res.render('ciudadmaderas/submitted.ejs', { user: user });
         })
         .catch(error => {
-            if(error.response)
-            res.sendStatus(error.response.status)
+            if (error.response)
+                res.sendStatus(error.response.status)
         })
 })
 
