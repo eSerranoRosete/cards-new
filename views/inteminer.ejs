@@ -108,30 +108,41 @@
     </div>
   </div>
   <script>
-
-           t.getElementById("share-button").addEventListener('click', () => {
-             igator.share) {
-               or.share({
-                 window.document.title,
-                 ndow.document.location.href,
-               (() => {
-                 .log('Thanks for sharing');
-                                      t.getElementById("share-button-sec").addEventListener('click', () => {
-             igator.share) {
-               or.share({
-                 window.document.title,
-                 ndow.document.location.href,
-               (() => {
-                 .log('Thanks for sharing');
-                                       verlay = document.getElementById('qrOverlay');
-           t.getElementById('qrBtn').addEventListener('click', () => {
-             scrollTo(0, 0);
-             ay.classList.remove('animate-[slideout_0.3s_ease-in-out_forwards]');
-             ay.classList.add('animate-[slidein_0.3s_ease-in-out_forwards]');
-                    t.getElementById('closeBtn').addEventListener('click', () => {
-             ay.classList.remove('animate-[slidein_0.3s_ease-in-out_forwards]');
-             ay.classList.add('animate-[slideout_0.3s_ease-in-out_forwards]');
+    document.getElementById("share-button").addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: window.document.title,
+          url: window.document.location.href,
+        }).then(() => {
+          console.log('Thanks for sharing');
         })
+      }
+    })
+
+    document.getElementById("share-button-sec").addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: window.document.title,
+          url: window.document.location.href,
+        }).then(() => {
+          console.log('Thanks for sharing');
+        })
+      }
+    })
+
+
+    let qrOverlay = document.getElementById('qrOverlay');
+    document.getElementById('qrBtn').addEventListener('click', () => {
+      window.scrollTo(0, 0);
+      qrOverlay.classList.remove('animate-[slideout_0.3s_ease-in-out_forwards]');
+      qrOverlay.classList.add('animate-[slidein_0.3s_ease-in-out_forwards]');
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      qrOverlay.classList.remove('animate-[slidein_0.3s_ease-in-out_forwards]');
+      qrOverlay.classList.add('animate-[slideout_0.3s_ease-in-out_forwards]');
+    })
+
   </script>
 </body>
 
