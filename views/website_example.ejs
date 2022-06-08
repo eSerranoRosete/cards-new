@@ -18,8 +18,8 @@
 <body>
   <div class="max-w-md m-auto bg-white min-h-screen relative overflow-hidden">
     <!-- BANNER -->
-    <div id="banner" class="w-full h-72 relative flex justify-center items-end z-10 rounded-b-3xl">
-      <img src="/public/images/banners/inteminer.png" alt="Cover Image"
+    <div id="banner" class="w-full h-60 sm:h-72 relative flex justify-center items-end z-10 rounded-b-3xl">
+      <img src="/public/images/banners/inteminer.jpg" alt="Cover Image"
         class="absolute object-cover rounded-b-3xl object-center h-full w-full">
       <!-- PROFILE PICTURE -->
       <div class="w-32 h-32 rounded-xl translate-y-1/2 overflow-hidden shadow-xl">
@@ -62,19 +62,17 @@
           </svg></a>
       </div>
     </div>
-
     <!-- SOCIAL MEDIA BUTTONS -->
     <div class="flex border-t border-slate-400 items-center justify-center flex-wrap w-full py-4 bg-white">
       <% for( let i=0; i < user.social.length; i++ ) { %>
         <a href="<%= user.social[i].link %> " target="_blank"><img
             src="/public/images/buttons/<%= user.social[i].name %>.svg" alt="<%= user.social[i].name %> icon"
-            class="w-12 m-3"></a>
+            class="w-12 m-2"></a>
         <% } %>
     </div>
-
     <!-- QR OVERLAY -->
     <div id="qrOverlay"
-      class="bg-white/75 backdrop-blur-xl text-black z-30 absolute -bottom-full py-10 w-full h-[95%] rounded-t-3xl shadow-3xl drop-shadow-2xl text-center">
+      class="bg-white/95 text-black z-30 absolute -bottom-full py-10 w-full h-[95%] rounded-t-3xl shadow-3xl drop-shadow-2xl text-center">
       <div class="flex items-end justify-center">
         <div>
           <p>Compartir Tarjeta Digital</p>
@@ -110,7 +108,6 @@
     </div>
   </div>
   <script>
-
     document.getElementById("share-button").addEventListener('click', () => {
       if (navigator.share) {
         navigator.share({
@@ -145,6 +142,7 @@
       qrOverlay.classList.remove('animate-[slidein_0.3s_ease-in-out_forwards]');
       qrOverlay.classList.add('animate-[slideout_0.3s_ease-in-out_forwards]');
     })
+
   </script>
 </body>
 
