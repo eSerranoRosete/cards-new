@@ -665,6 +665,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -721,12 +725,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 13rem;
 }
 
-.h-60 {
-  height: 15rem;
-}
-
 .h-auto {
   height: auto;
+}
+
+.h-60 {
+  height: 15rem;
 }
 
 .h-\[90\%\] {
@@ -737,20 +741,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-8 {
-  height: 2rem;
+.h-9 {
+  height: 2.25rem;
 }
 
 .h-1 {
   height: 0.25rem;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-9 {
-  height: 2.25rem;
 }
 
 .max-h-52 {
@@ -1140,10 +1136,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
-.bg-white\/95 {
-  background-color: rgb(255 255 255 / 0.95);
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
@@ -1156,6 +1148,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-black\/75 {
   background-color: rgb(0 0 0 / 0.75);
+}
+
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
 }
 
 .bg-slate-100 {
@@ -1194,19 +1190,9 @@ Ensure the default browser behavior of the `hidden` attribute.
      object-fit: cover;
 }
 
-.object-scale-down {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-
 .object-center {
   -o-object-position: center;
      object-position: center;
-}
-
-.object-top {
-  -o-object-position: top;
-     object-position: top;
 }
 
 .p-3 {
@@ -1219,6 +1205,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-6 {
