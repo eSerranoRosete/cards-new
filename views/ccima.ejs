@@ -11,19 +11,22 @@
     <link rel="apple-touch-icon" href="/public/images/icons/inteminer-icon.png">
 </head>
 <body>
-    <div class="max-w-md m-auto bg-white min-h-screen relative overflow-hidden">
+    <div class="max-w-md m-auto min-h-screen relative overflow-hidden">
         <!-- BANNER -->
-        <div id="banner" class="w-full h-72 relative flex justify-center items-end z-10">
-            <img src="/public/images/ccima/ccima_banner.jpg" alt="Cover Image" class="absolute object-cover object-center h-full w-full">
+        <div id="banner" class="w-full h-72 relative flex flex-col items-center justify-end">
+            <img src="/public/images/ccima/ccima_banner.jpg" alt="Cover Image" class="absolute -z-10 object-cover object-center h-full w-full">
             <!-- PROFILE PICTURE -->
-            <div class="w-36 h-36 rounded-xl translate-y-1/2 overflow-hidden shadow-xl ">
+            <div class="w-36 h-36 z-20 rounded-xl overflow-hidden shadow-xl translate-y-1/2">
                 <img src="https://api.inteminer.com/users/<%= user._id %>/profile" alt="Profile Image" class="w-full h-full object-cover object-center">
             </div>
         </div>
         <!-- MAIN CONTACT -->
-        <div class="pt-24 text-center relative ">
+        <div class="text-center relative pt-24">
             <!-- QR CODE ICON -->
             <img id="qrBtn" src="/public/images/buttons/qr-button.svg" alt="QR button icon" class="absolute right-4 top-4 cursor-pointer shadow-xl">
+            <p class="flex items-center justify-center mb-5 font-bold text-slate-800 "><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>Empresa Constructora</p>
             <div class="w-5/6 m-auto p-3 mb-5 text-slate-800  rounded-xl border-2 bg-white shadow-xl border-yellow-600">
                 <h4 class="text-2xl font-bold"><%= user.first_name %> <%= user.last_name %></h4>
                 <p class="text-sm max-w-xs m-auto mb-2"><%= user.title %></p>
